@@ -10,6 +10,8 @@ import {
   Syringe,
   UserCheck,
 } from 'lucide-react';
+import teamImage from '../assets/images/caath_medical_care_1794518704230.jpg';
+import hyperbaricImage from '../assets/images/caath_hyperbaric_tech_1794518705213.jpg';
 import { CLINIC_SERVICES, type ModalityId } from '../lib/clinicData';
 
 interface ServicesSectionProps {
@@ -172,14 +174,16 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
             {/* Layered Clean Dual Imagery (Zero text overlays) */}
             <div className="lg:col-span-5 space-y-4">
               <div className="p-2 rounded-3xl bg-white border border-slate-200/90 shadow-[0_20px_50px_-15px_rgba(11,37,69,0.12)]">
-                <div className="aspect-[4/3] rounded-[18px] overflow-hidden bg-[#0B2545]">
+                <div className="group aspect-[4/3] rounded-[18px] overflow-hidden bg-[#0B2545]">
                   {!teamImgFailed ? (
                     <img
-                      src="/src/assets/images/caath_medical_care_1794518704230.jpg"
+                      src={teamImage}
                       alt="Equipo médico CAATH brindando atención humana y especializada al paciente"
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       onError={() => setTeamImgFailed(true)}
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.035]"
                     />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center text-white">
@@ -191,14 +195,16 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
               </div>
 
               <div className="p-2 rounded-3xl bg-white border border-slate-200/90 shadow-[0_18px_40px_-15px_rgba(11,37,69,0.1)]">
-                <div className="aspect-[4/3] rounded-[18px] overflow-hidden bg-[#06172D]">
+                <div className="group aspect-[4/3] rounded-[18px] overflow-hidden bg-[#06172D]">
                   {!hyperbaricImgFailed ? (
                     <img
-                      src="/src/assets/images/caath_hyperbaric_tech_1794518705213.jpg"
+                      src={hyperbaricImage}
                       alt="Cámara hiperbárica clínica de última generación en CAATH Montería"
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       onError={() => setHyperbaricImgFailed(true)}
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.035]"
                     />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center text-white">

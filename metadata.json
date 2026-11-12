@@ -1,0 +1,6 @@
+{
+  "name": "CAATH - Centro Avanzado en Atención y Tratamiento de Heridas",
+  "description": "Clínica especializada en manejo avanzado de heridas complejas, pie diabético, cámara hiperbárica y atención domiciliaria en Montería, Córdoba.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

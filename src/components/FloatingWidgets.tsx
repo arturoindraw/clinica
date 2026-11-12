@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { MessageCircle, Send, X } from 'lucide-react';
+import nurseAvatar from '../assets/images/caath_virtual_nurse_avatar.jpg';
 import { CHATBOT_QUICK_TOPICS, CLINIC_INFO } from '../lib/clinicData';
 import { buildWhatsAppUrl, matchClinicFaq } from '../lib/clinicLogic';
 
@@ -11,34 +12,11 @@ interface ChatMessage {
 
 function NurseAvatar({ className = 'w-10 h-10' }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 64 64"
-      className={className}
-      role="img"
-      aria-label="Enfermera virtual CAATH con gorro azul oscuro"
-    >
-      <circle cx="32" cy="32" r="31" fill="#E0F2FE" stroke="#0B2545" strokeWidth="2" />
-      {/* Uniform shoulders */}
-      <path d="M13 58C15 47 22 43 32 43C42 43 49 47 51 58" fill="#0B2545" />
-      <path d="M26 43L32 51L38 43" fill="#38BDF8" />
-      {/* Face & hair */}
-      <circle cx="32" cy="30" r="12" fill="#F6D0B1" />
-      <path d="M20 29C20 20 25 16 32 16C39 16 44 20 44 29C42 25 38 22 32 22C26 22 22 25 20 29Z" fill="#1E293B" />
-      {/* Dark blue nurse cap (#0B2545) */}
-      <path d="M20 18L24 9H40L44 18Z" fill="#0B2545" stroke="#06172D" strokeWidth="1.2" />
-      <rect x="30.5" y="11" width="3" height="6" rx="0.6" fill="#FFFFFF" />
-      <rect x="29" y="12.5" width="6" height="3" rx="0.6" fill="#FFFFFF" />
-      {/* Eyes & warm smile */}
-      <circle cx="28" cy="30" r="1.4" fill="#0F172A" />
-      <circle cx="36" cy="30" r="1.4" fill="#0F172A" />
-      <path
-        d="M28.5 34.5C30 36.5 34 36.5 35.5 34.5"
-        fill="none"
-        stroke="#0F172A"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
+    <img
+      src={nurseAvatar}
+      alt="Enfermera virtual CAATH con uniforme azul"
+      className={`${className} rounded-full border-2 border-[#0B2545] object-cover`}
+    />
   );
 }
 

@@ -184,7 +184,7 @@ export function AppointmentScheduler({
     COVERAGE_OPTIONS.find((c) => c.id === coverage)?.label ?? 'Particular';
 
   return (
-    <section id="agendar" className="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <section id="agendar" className="py-12 sm:py-16 lg:py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-10">
           <p className="text-xs font-mono uppercase tracking-wider text-cyan-700 font-semibold">
@@ -204,7 +204,7 @@ export function AppointmentScheduler({
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left column: Modality & Calendar with tactile layered surface */}
-          <div className="lg:col-span-7 bg-slate-100/80 border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] space-y-8">
+          <div className="lg:col-span-7 bg-slate-100/80 border border-slate-200/90 rounded-3xl p-4 sm:p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] space-y-8">
             <div>
               <h3 className="font-display text-base font-semibold text-[#0B2545] mb-3">
                 1. Modalidad de atención
@@ -347,7 +347,7 @@ export function AppointmentScheduler({
           </div>
 
           {/* Right column: Elevated Clinical Booking Sheet */}
-          <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-[0_24px_55px_-16px_rgba(11,37,69,0.14),inset_0_1px_0_rgba(255,255,255,0.95)]">
+          <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-3xl p-4 sm:p-8 shadow-[0_24px_55px_-16px_rgba(11,37,69,0.14),inset_0_1px_0_rgba(255,255,255,0.95)]">
             {confirmed ? (
               <div data-testid="booking-confirmation" className="space-y-5">
                 <div className="flex items-start gap-3">

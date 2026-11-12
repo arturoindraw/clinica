@@ -35,7 +35,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
       {/* Services Grid with Tactile Layered Cards */}
       <section
         id="servicios"
-        className="relative py-16 sm:py-20 bg-gradient-to-b from-slate-100/80 to-white border-b border-slate-200 overflow-hidden"
+        className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-slate-100/80 to-white border-b border-slate-200 overflow-hidden"
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -168,7 +168,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
       </section>
 
       {/* Technology & Human Commitment + Convenios (Clean text-free images) */}
-      <section id="tecnologia" className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+      <section id="tecnologia" className="py-12 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Layered Clean Dual Imagery (Zero text overlays) */}

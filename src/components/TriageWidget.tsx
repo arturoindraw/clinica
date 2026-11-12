@@ -54,7 +54,7 @@ export function TriageWidget({ onApplyRecommendation }: TriageWidgetProps) {
     WOUND_CONDITIONS.find((c) => c.id === selectedCondition)?.label ?? '';
 
   return (
-    <section id="triage" className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <section id="triage" className="py-12 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-10">
           <p className="text-xs font-mono uppercase tracking-wider text-cyan-700 font-semibold">
@@ -72,14 +72,14 @@ export function TriageWidget({ onApplyRecommendation }: TriageWidgetProps) {
           </p>
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+        <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-8 shadow-sm">
           {/* Step 1 */}
           <div>
-            <div className="flex items-center justify-between gap-4 mb-4">
-              <h3 className="font-display text-lg font-semibold text-[#0B2545]">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+              <h3 className="font-display text-base sm:text-lg font-semibold text-[#0B2545]">
                 Paso 1. ¿Qué tipo de herida o condición necesitas tratar?
               </h3>
-              <span className="text-xs font-mono text-slate-500 whitespace-nowrap">
+              <span className="text-xs font-mono text-slate-500">
                 7 opciones clínicas
               </span>
             </div>
@@ -131,11 +131,11 @@ export function TriageWidget({ onApplyRecommendation }: TriageWidgetProps) {
 
           {/* Step 2 */}
           <div>
-            <div className="flex items-center justify-between gap-4 mb-4">
-              <h3 className="font-display text-lg font-semibold text-[#0B2545]">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+              <h3 className="font-display text-base sm:text-lg font-semibold text-[#0B2545]">
                 Paso 2. ¿Cuentas con cobertura por alguna EPS o convenio en particular?
               </h3>
-              <span className="text-xs font-mono text-slate-500 whitespace-nowrap">
+              <span className="text-xs font-mono text-slate-500">
                 Selecciona 1 opción
               </span>
             </div>
@@ -177,7 +177,7 @@ export function TriageWidget({ onApplyRecommendation }: TriageWidgetProps) {
             {recommendation ? (
               <div
                 data-testid="triage-recommendation"
-                className="rounded-xl bg-[#0B2545] text-white p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6"
+                className="rounded-xl bg-[#0B2545] text-white p-4 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6"
               >
                 <div className="max-w-2xl">
                   <div className="flex flex-wrap items-center gap-2 text-xs text-cyan-300 font-medium">
@@ -198,7 +198,7 @@ export function TriageWidget({ onApplyRecommendation }: TriageWidgetProps) {
                   </p>
                 </div>
 
-                <div className="shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3">
+                <div className="w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-3">
                   <button
                     type="button"
                     onClick={() =>
@@ -209,7 +209,7 @@ export function TriageWidget({ onApplyRecommendation }: TriageWidgetProps) {
                         serviceTitle: recommendation.serviceTitle,
                       })
                     }
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#06172D] font-semibold text-sm transition-colors cursor-pointer whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="inline-flex w-full min-w-0 sm:w-auto items-center justify-center gap-2 px-4 sm:px-6 py-3.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#06172D] font-semibold text-sm text-center leading-snug transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     <span>Agendar con este especialista</span>
                     <ArrowRight className="w-4 h-4" />

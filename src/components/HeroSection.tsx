@@ -24,7 +24,7 @@ export function HeroSection({ onSelectModality }: HeroSectionProps) {
         className="pointer-events-none absolute bottom-0 left-1/4 w-[480px] h-[360px] rounded-full bg-sky-400/10 blur-3xl"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-14 lg:pt-16 lg:pb-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12 sm:pt-12 sm:pb-14 lg:pt-16 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           {/* Left column: Value proposition + dual interactive CTAs */}
           <div className="lg:col-span-7 flex flex-col justify-center">
@@ -52,19 +52,19 @@ export function HeroSection({ onSelectModality }: HeroSectionProps) {
               <button
                 type="button"
                 onClick={() => onSelectModality('presencial')}
-                className="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#06172D] font-semibold text-sm shadow-[0_12px_28px_-8px_rgba(34,211,238,0.45)] transition-[background-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap shrink-0"
+                className="inline-flex w-full min-w-0 sm:w-auto items-center justify-center gap-2.5 px-4 sm:px-5 py-3.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-[#06172D] font-semibold text-sm text-center leading-snug shadow-[0_12px_28px_-8px_rgba(34,211,238,0.45)] transition-[background-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:whitespace-nowrap"
               >
                 <CalendarCheck className="w-4 h-4 shrink-0" />
-                <span>Agendar Consulta Presencial o Domiciliaria</span>
+                <span className="text-center">Agendar Consulta Presencial o Domiciliaria</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => onSelectModality('videollamada')}
-                className="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl border border-white/20 bg-white/[0.07] backdrop-blur-md hover:bg-white/[0.14] text-white font-medium text-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] transition-[background-color,transform] duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 whitespace-nowrap shrink-0"
+                className="inline-flex w-full min-w-0 sm:w-auto items-center justify-center gap-2.5 px-4 sm:px-5 py-3.5 rounded-xl border border-white/20 bg-white/[0.07] backdrop-blur-md hover:bg-white/[0.14] text-white font-medium text-sm text-center leading-snug shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] transition-[background-color,transform] duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 sm:whitespace-nowrap"
               >
                 <Video className="w-4 h-4 text-cyan-300 shrink-0" />
-                <span>Iniciar Asesoría Virtual por Video llamada</span>
+                <span className="text-center">Iniciar Asesoría Virtual por Video llamada</span>
               </button>
             </div>
 

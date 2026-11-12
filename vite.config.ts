@@ -5,8 +5,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    // Propiedad base obligatoria para que GitHub Pages resuelva las rutas relativas en /clinica/
-    base: '/clinica/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

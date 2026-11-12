@@ -5,13 +5,17 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    // Esta línea es la que soluciona la pantalla en blanco en GitHub Pages
-    base: '/clinica/',
+    // Solución definitiva para GitHub Pages: rutas relativas
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
+    },
+    server: {
+      hmr: process.env.DISABLE_HMR !== 'true',
+      watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
   };
 });
